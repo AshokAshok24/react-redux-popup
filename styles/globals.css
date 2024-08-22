@@ -1,0 +1,66 @@
+
+
+
+/* PopUp Model Style */
+
+
+.popup{
+
+    background-color: rgb(128, 128, 128, .8);
+}
+
+.popup .wrapper{
+    padding: 30px;
+}
+
+.popup .wrapper i{
+
+    font-size: 32px;
+    color: rgb(224, 59, 59);
+    background-color: rgb(240, 205, 205 .1);
+    padding: 14px 14px;
+
+}
+
+.popup .wrapper h3{
+
+    color: red;
+}
+
+.popup .wrapper p{
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.popup .wrapper .btn-wrapper{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.popup .wrapper .btn-wrapper button{
+    
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+    user-select: none;
+
+}
+
+.popup .wrapper .btn-wrapper button.cancel{
+
+    border: 1px solid rgb(128, 128, 128, .1);
+    background: rgb(128, 128, 128, .1);
+}
+
+.popup .wrapper .btn-wrapper button.confirm{
+
+    border: 1px solid rgb(241, 86, 30, .9);
+    background: rgb(241, 86, 30, .9);
+}
