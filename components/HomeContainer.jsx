@@ -13,11 +13,21 @@ const HomeContainer = ({ children }) => {
     return (
 
         <>
-            <div>HomeContainer</div>
 
-            <button onClick={() => { dispatch(confirmVisibility({ show: false })) }}>Cancel</button>
+            <div className='main'>
 
-            <button onClick={() => { dispatch(confirmVisibility({ show: true })) }}>Confirm</button>
+                <h2>HomeContainer</h2>
+
+                <ul>
+                    <li>Add List</li>
+                    <li>Delete List</li>
+                    <li>Confirm popup</li>
+                </ul>
+
+            </div>
+
+
+            <button className='btn btn-success' onClick={() => { dispatch(confirmVisibility({ show: true })) }}>Confirm</button>
             <div>
                 <ConfirmPopup visible={confirmSelectot.show} />
                 {children}
