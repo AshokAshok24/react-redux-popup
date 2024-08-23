@@ -15,20 +15,35 @@ const ViewList = () => {
                 <div className="row">
                     <div className="col-6">
 
-                        {JSON.stringify(listItems)}
-
-                        <ul className='nav-list'>
-
-
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Items</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
 
                             {listItems && listItems.map((item, index) => (
 
                                 <>
 
-                                    <li className='list' key={index}>{item}</li>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">{index + 1}</th>
+                                            <td>{item}</td>
+                                            <td className='text-danger'>
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
                                 </>
                             ))}
-                        </ul>
+
+                        </table>
+
                     </div>
                 </div>
 
