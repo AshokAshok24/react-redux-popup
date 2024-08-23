@@ -1,27 +1,27 @@
 import ConfirmPopup from '@/commonComponent/ConfirmPopup'
-import { confirmVisibility } from '@/lib/slicers/popupSlicer'
 import React from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { useDispatch, useSelector } from 'react-redux'
 import AddList from './AddList';
 import ViewList from './ViewList';
-import DeleteList from './DeleteList';
+import DeletePopup from '@/commonComponent/DeletePopup';
+import ConfirmView from './ConfirmView';
 
 const HomeContainer = ({ children }) => {
 
     const dispatch = useDispatch()
 
-    const confirmSelectot = useSelector(state => state.popupReducer.confirmPopup)
+    const confirmSelector = useSelector(state => state.popupReducer.confirmPopup)
+    const deleteSelector = useSelector(state => state.popupReducer.deletePopup)
 
-    console.log("confrm Selector", confirmSelectot)
     return (
 
         <>
 
             <div className="container mt-5">
 
-                <h2 className='mb-4'>HomeContainer</h2>
+                <h2 className='mb-4'>Add Items and List Items With Delete Action By Using React-Redux</h2>
 
                 <Tabs id='left-tabs-example' defaultActiveKey={1}>
                     <Tab eventKey={1} title="Add List">
@@ -31,15 +31,16 @@ const HomeContainer = ({ children }) => {
                         <ViewList />
                     </Tab>
                     <Tab eventKey={3} title="Confirm">
-                        <DeleteList />
+                        <ConfirmView />
                     </Tab>
                 </Tabs>
 
             </div>
 
-            <button className='btn btn-success' onClick={() => { dispatch(confirmVisibility({ show: true })) }}>Confirm</button>
             <div>
-                <ConfirmPopup visible={confirmSelectot.show} />
+
+                <DeletePopup visible={deleteSelector.show} />
+                <ConfirmPopup visible={confirmSelector.show} />
                 {children}
             </div>
         </>
