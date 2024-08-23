@@ -3,7 +3,11 @@ import React from 'react'
 const ViewList = () => {
     return (
         <>
-            <div>ViewList</div>
+            <div className='container m-5'>
+
+                <div>View List Items</div>
+
+            </div>
 
         </>
     )
