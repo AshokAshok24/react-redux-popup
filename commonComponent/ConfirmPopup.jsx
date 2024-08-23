@@ -17,6 +17,11 @@ const ConfirmPopup = ({ visible, setShow }) => {
         dispatch(confirmVisibility({ show: false, status: false }))
     }
 
+    const handleConfirm = () => {
+
+        dispatch(confirmVisibility({ show: false, status: false }))
+    }
+
     return (
         <>
             <Modal show={confirm.show} centered onEscapeKeyDown={handleOnHide} className='popup'>
@@ -31,7 +36,7 @@ const ConfirmPopup = ({ visible, setShow }) => {
 
                         <div className='btn-wrapper'>
                             <button className='cancel' onClick={handleCancel}>Cancel</button>
-                            <button className='confirm'>Confirm</button>
+                            <button className='confirm' onClick={handleConfirm}>Confirm</button>
                         </div>
                     </div>
 
