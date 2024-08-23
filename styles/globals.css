@@ -10,7 +10,7 @@
 }
 
 .popup .wrapper{
-    padding: 30px;
+    padding: 10px;
 }
 
 .popup .wrapper i{
@@ -63,4 +63,20 @@
 
     border: 1px solid rgb(241, 86, 30, .9);
     background: rgb(241, 86, 30, .9);
+    color: #fff;
+}
+
+.popup .wrapper .btn-wrapper button.cancel:hover{
+
+    background: transparent ;
+}
+.popup .wrapper .btn-wrapper button.confirm:hover{
+    background: transparent;
+    color:rgb(128, 86, 39, .9)
+}
+
+.popup .wrapper .btn-wrapper button.cancel:active,
+.popup .wrapper .btn-wrapper button.confirm:active{
+
+    transform: scale(.7);
 }
